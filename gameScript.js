@@ -31,11 +31,11 @@ window.onload = function() {
     <li>If they don't match, both blocks will flip back, faced down.</li>
     <p style="font-size:18px;">Click one of the following modes to start a game.</p>
     </div>
-    <button onclick="start(3, 4)">Easy (3 x 4)</button>
+    <button onclick="start(3, 4)">Easy<br/>(3 x 4)</button>
     <!--button onclick="start(4, 4)" style="w">4 x 4</button-->
-    <button onclick="start(4, 5)">Medium (4 x 5)</button>
+    <button onclick="start(4, 5)">Medium<br/>(4 x 5)</button>
     <!--button onclick="start(5, 6)">5 x 6</button-->
-    <button onclick="start(6, 6)">Hard (6 x 6)</button></center>`);
+    <button onclick="start(6, 6)">Hard<br/>(6 x 6)</button></center>`);
 }
 
 //Starting the game
@@ -147,11 +147,11 @@ function change(x) {
               $("#ol").html(`<center><div id="iol"><h2>Great job!</h2>
                 <p style="font-size:23px;padding:10px;">You completed the ${mode} mode in ${moves} moves. It took you ${time}.</p>
                 <p style="font-size:18px">Let's keep your memory sharp.<br/>Play Again ?</p>
-                <button onclick="start(3, 4)">Easy (3 x 4)</button>
+                <button onclick="start(3, 4)">Easy<br/>(3 x 4)</button>
                 <!--button onclick="start(4, 4)" style="w">4 x 4</button-->
-                <button onclick="start(4, 5)">Medium (4 x 5)</button>
+                <button onclick="start(4, 5)">Medium<br/>(4 x 5)</button>
                 <!--button onclick="start(5, 6)">5 x 6</button-->
-                <button onclick="start(6, 6)">Hard (6 x 6)</button>
+                <button onclick="start(6, 6)">Hard<br/>(6 x 6)</button>
                 </div></center>`);
               $("#ol").fadeIn(750);
           }, 1500);
