@@ -26,9 +26,9 @@ window.onload = function() {
     <div id="inst"><h3>Welcome !</h3>Instructions For Game
     <br/>
     <br/>
-    <li>Make pairs of similiar blocks by flipping them.</li>
+    <li>Make pairs of similiar blocks by flipping them, face up.</li>
     <li>To flip a block, click or tap on it.</li>
-    <li>If they don't match, both blocks will flip back, faced down.</li>
+    <li>If they don't match, both blocks will flip back, face down.</li>
     <p style="font-size:18px;">Click one of the following modes to start a game.</p>
     </div>
     <button onclick="start(3, 4)">Easy<br/>(3 x 4)</button>
