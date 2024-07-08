@@ -19,14 +19,14 @@ p {
 }
 td {
     background-color: transparent;
-    height:70px;
-    width:70px;
+    height:90px;
+    width:100px;
 }
 td, .inner, .front, .back {
     border-radius: 4px;
 }
 table {
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 #inst {

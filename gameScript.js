@@ -1,11 +1,12 @@
+var imgs = ["Image1.jpeg", "Image2.jpg", "Image3.jpg", "Image4.jpg", "Image5.jpeg", "Image6.PNG",]
 var em = ["💐","🌹","🌻","🏵️","🌺","🌴","🌈","🍓","🍒","🍎","🍉","🍊","🥭","🍍","🍋","🍏","🍐","🥝","🍇","🥥","🍅","🌶️","🍄","🧅","🥦","🥑","🍔","🍕","🧁","🎂","🍬","🍩","🍫","🎈"];
 //Shuffling above array
-var tmp, c, p = em.length;
+var tmp, c, p = imgs.length;
 if(p) while(--p) {
    c = Math.floor(Math.random() * (p + 1));
-   tmp = em[c];
-   em[c] = em[p];
-   em[p] = tmp;
+   tmp = imgs[c];
+   imgs[c] = imgs[p];
+   imgs[p] = tmp;
 }
 
 //Variables
@@ -59,9 +60,9 @@ function start(r,l) {
     //Generating item array and shuffling it
     var items = [];
     for (var i=0;i<noItems;i++)
-        items.push(em[i]);
+        items.push(imgs[i]);
     for (var i=0;i<noItems;i++)
-        items.push(em[i]);
+        items.push(imgs[i]);
     var tmp, c, p = items.length;
     if(p) while(--p) {
         c = Math.floor(Math.random() * (p + 1));
@@ -76,7 +77,8 @@ function start(r,l) {
     for (var i = 1;i<=r;i++) {
         $("table").append("<tr>");
         for (var j = 1;j<=l;j++) {
-           $("table").append(`<td id='${n}' onclick="change(${n})"><div class='inner'><div class='front'></div><div class='back'><p>${items[n-1]}</p></div></div></td>`);
+           $("table").append(`<td id='${n}' onclick="change(${n})"><div class='inner'><div class='front'></div><div class='back'>
+    <img src="./Images/Tile Img/${items[n-1]}" id="${items[n-1]}" style="width:100%;height:100%"/></div></div></td>`);
            n++;
          }
          $("table").append("</tr>");
@@ -91,7 +93,7 @@ function change(x) {
   //Variables
   let i = "#"+x+" .inner";
   let f = "#"+x+" .inner .front";
-  let b = "#"+x+" .inner .back";
+  let b = "#"+x+" .inner .back img";
   
   //Dont flip for these conditions
   if (turn==2 || $(i).attr("flip")=="block" || ppID==x) {}
@@ -104,7 +106,7 @@ function change(x) {
       turn=2;
       
       //If both flipped blocks are not same
-      if (pre!=$(b).text()) {
+      if (pre!=$(b).attr("id")) {
          setTimeout(function() {
             $(pID).css(t, flipBack);
             $(i).css(t, flipBack);
@@ -128,7 +130,7 @@ function change(x) {
       
     }
     else {
-      pre = $(b).text();
+      pre = $(b).attr("id");
       ppID = x;
       pID = "#"+x+" .inner";
       turn=1;
