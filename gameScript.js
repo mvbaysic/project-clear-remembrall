@@ -26,6 +26,7 @@ function init() {
 
 //Showing instructions
 window.onload = function () {
+  document.getElementById("pianobg").volume = 0.1;
   $("#ol").html(`<center>
     <div id="inst"><h3>Welcome !</h3>Instructions For Game
     <br/>
@@ -44,6 +45,9 @@ window.onload = function () {
 
 //Starting the game
 function start(r, l) {
+  document.getElementById("pianobg").play();
+
+
   //Timer and moves
   min = 0, sec = 0, moves = 0;
   $("#time").html("Time: 00:00");
@@ -139,7 +143,6 @@ function change(x) {
         $(pID).attr("flip", "block");
         document.getElementById("matchsfx").play();
         document.getElementById($(sfx).attr("id")).play();
-        console.log($(b).attr("id") + " - " + $(sfx).attr("id"));
       }
 
       setTimeout(function () {
