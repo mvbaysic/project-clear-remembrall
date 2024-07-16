@@ -1,5 +1,5 @@
-var imgs = ["Image1.jpeg", "Image2.jpg", "Image3.jpg", "Image4.jpg", "Image5.jpeg", "Image6.png",]
-var narrations = ["narration01", "narration02", "narration03", "narration04", "narration05", "narration06"]
+var imgs = ["Image01.jpg", "Image02.jpg", "Image03.jpg", "Image04.jpg", "Image05.jpg", "Image06.jpg", "Image07.jpg", "Image08.jpg", "Image09.jpg", "Image10.jpg", "Image11.jpg", "Image12.jpg",]
+var narrations = ["narration01", "narration02", "narration03", "narration04", "narration05", "narration06", "narration07", "narration08", "narration09", "narration10", "narration11", "narration12"]
 //Shuffling above array
 var tmp, tmpAudio, c, p = imgs.length;
 if (p) while (--p) {
