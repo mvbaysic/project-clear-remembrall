@@ -3,15 +3,14 @@
     font-family: 'Biryani', sans-serif;
 }
 html {
-    width:100vw;
+    width:100%;
     height:100%;
 }
 body {
     margin:0px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#4481eb), to(#04bedd));
-    background-image: -o-linear-gradient(top, #4481eb 0%, #04bedd 100%);
-    background-image: linear-gradient(to bottom, #4481eb 0%, #04bedd 100%);
+    background-color: #4481eb;
 }
+
 
 p {
     font-size: 40px;
@@ -19,8 +18,8 @@ p {
 }
 td {
     background-color: transparent;
-    height:90px;
-    width:100px;
+    height:200px;
+    width:230px;
 }
 td, .inner, .front, .back {
     border-radius: 4px;
@@ -111,7 +110,7 @@ button {
 
 .inner {
     position: relative;
-    width: 100%;
+    width: 230px;
     height: 100%;
     text-align: center;
     -webkit-transition: -webkit-transform 0.8s;
@@ -137,7 +136,7 @@ button {
 
 .front, .back {
     position: absolute;
-    width: 100%;
+    width: 230px;
     height: 100%;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
