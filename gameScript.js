@@ -26,7 +26,7 @@ function init() {
 
 //Showing instructions
 window.onload = function () {
-  document.getElementById("pianobg").volume = 0.1;
+  document.getElementById("melonpiano").volume = 0.1;
   $("#ol").html(`<center>
     <div id="inst"><h3>Welcome !</h3>Instructions For Game
     <br/>
@@ -45,7 +45,7 @@ window.onload = function () {
 
 //Starting the game
 function start(r, l) {
-  document.getElementById("pianobg").play();
+  document.getElementById("melonpiano").play();
 
 
   //Timer and moves
